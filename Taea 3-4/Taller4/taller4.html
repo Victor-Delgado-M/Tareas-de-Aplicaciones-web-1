@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Taller 4
+    </title>
+    <style>
+        .di-h1{
+            color: rgb(179, 9, 65);
+            padding-left: 100px;
+
+        }
+
+        .btn{
+            
+            color: white;
+            background-color: purple;
+            margin-left: 50vh;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1 class="di-h1">1.Transforme la hora actual en segundos</h1>
+    <script type="text/javascript">
+        function fecha_actual(){
+            alert("Fecha actual:"+ new Date()+"\n"+ "En segundos:"+ Math.round(
+          new Date().getTime() / 60.0))
+        }
+        document.write(
+          '<button type="button" class=\"btn\" onclick="fecha_actual()">Transformar hora en seg</button>'
+        );
+      </script>
+
+    <h1  class="di-h1"> 2.Calcule el área de un triángulo, que es igual a (base * altura)/2.</h1>
+    <script type="text/javascript">
+        function calcular_area(){
+            base=parseInt(prompt("Ingresa la base:"));
+            altura=parseInt(prompt("Ingresa la altura :"));
+            resultado = (base * altura)/2
+            alert("El área de un triángulo es : " +resultado)
+        }
+        document.write(
+        '<button type="button" class=\"btn\" onclick="calcular_area()">Calcular área de un triángulo</button>'
+        );
+    </script>
+
+        <h1  class="di-h1">  3.Calcule la raíz cuadrada de un número impar y muestre el resultado con 3 dígitos.</h1>
+        <script type="text/javascript">
+            function calcular_raiz(){
+                impar=parseInt(prompt("Ingresa número impar:"));
+
+                if((impar % 2) == 0  ){
+                    alert("no es número impar")
+                } else{
+                let result  = Math.sqrt(impar) ;
+
+                let redondeo = result.toFixed(2)
+                
+                alert("La raíz cuadrada del número : " +redondeo)
+            }
+            }
+            document.write(
+            '<button type="button" class=\"btn\" onclick="calcular_raiz()">Calcular raíz cuadrada</button>'
+            );
+        </script>
+
+
+        <h1  class="di-h1"> 4.Ingresar una cadena de texto y mostrar la longitud de la cadena</h1>
+        <script type="text/javascript">
+            function calcular_longitud(){
+                cadena=prompt("Ingresa cadena de texto:");
+
+                let result  = cadena.toString().split(' ')
+
+                let valor =result.join('')
+                
+                alert("Logintud de la cadena de texto : " +valor.length)
+            }
+            
+            document.write(
+            '<button type="button" class=\"btn\" onclick="calcular_longitud()">Calcular logintud de la cadena</button>'
+            );
+        </script>
+
+        
+        <h1  class="di-h1"> 5.Mostrar la versión del navegador</h1>
+        <script type="text/javascript">
+            function mostrar_version(){
+            
+                
+                alert("Versión del navegador: " +navigator.appVersion)
+            }
+            document.write(
+            '<button type="button" class=\"btn\" onclick="mostrar_version()">Mostrar versión del navegador</button>'
+            );
+        </script>
+
+
+        <h1  class="di-h1"> 6.Mostrar el ancho y altura de la pantalla</h1>
+        <script type="text/javascript">
+            function mostrar_version(){
+            
+                alert("El ancho del navegador: " +screen.width + "\n" + "Altura del navegador" + screen.height )
+
+            }
+            document.write(
+            '<button type="button" class=\"btn\" onclick="mostrar_version()">Mostrar ancho y altura de pantalla</button>'
+            );
+        </script>
+        <h1  class="di-h1">  7.Imprimir la página</h1>
+        <script type="text/javascript">
+            function imprimir(){
+            
+                window.print()
+
+            }
+            document.write(
+            '<button type="button" class=\"btn\" onclick="imprimir()">Imprimir</button>'
+            );
+        </script>
+</body>
+</html>
